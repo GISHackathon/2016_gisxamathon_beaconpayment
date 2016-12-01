@@ -1,0 +1,50 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "hack",
+      "collectionName": "beacons",
+      "createIfNotExists": true,
+      "connection": "czcsasinno_DOCUMENTDB",
+      "direction": "out"
+    },
+    {
+      "type": "notificationHub",
+      "name": "notification",
+      "hubName": "myNotificationHub",
+      "connection": "hackNotif_NOTIFICATIONHUB",
+      "direction": "out"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocumentOrderCheckin",
+      "databaseName": "hack",
+      "collectionName": "order_checkin",
+      "createIfNotExists": false,
+      "connection": "czcsasinno_DOCUMENTDB",
+      "direction": "out"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocumentOrderDistribute",
+      "databaseName": "hack",
+      "collectionName": "order_distribute",
+      "createIfNotExists": false,
+      "connection": "czcsasinno_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

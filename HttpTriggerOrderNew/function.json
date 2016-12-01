@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "hack",
+      "collectionName": "order_prepare",
+      "createIfNotExists": false,
+      "connection": "czcsasinno_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

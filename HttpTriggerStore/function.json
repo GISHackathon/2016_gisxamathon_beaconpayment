@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "documentDB",
+      "name": "inputDocument",
+      "databaseName": "hack",
+      "collectionName": "stores",
+      "id": "{documentId}",
+      "connection": "czcsasinno_DOCUMENTDB",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

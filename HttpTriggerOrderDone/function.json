@@ -1,0 +1,34 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "documentDB",
+      "name": "inputDocument",
+      "databaseName": "hack",
+      "collectionName": "order_distribute",
+      "id": "{documentId}",
+      "connection": "czcsasinno_DOCUMENTDB",
+      "direction": "in"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "hack",
+      "collectionName": "order_done",
+      "createIfNotExists": false,
+      "connection": "czcsasinno_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
